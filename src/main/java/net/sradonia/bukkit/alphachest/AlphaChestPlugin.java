@@ -70,7 +70,7 @@ public class AlphaChestPlugin extends JavaPlugin implements Listener {
 	public void onPlayerDeath(final PlayerDeathEvent event) {
 		final Player player = event.getEntity();
 		if (clearOnDeath && !player.hasPermission("alphachest.keepOnDeath")) {
-			chestManager.removeChest(player.getName());
+			chestManager.dropChest(player.getName());
 		}
 	}
 }
